@@ -2,13 +2,11 @@
 
 namespace StrategyPattern
 {
-    // Strategy interface
     public interface IPaymentStrategy
     {
         void Pay(decimal amount);
     }
 
-    // Concrete strategies
     public class CreditCardPayment : IPaymentStrategy
     {
         public void Pay(decimal amount)
@@ -25,7 +23,6 @@ namespace StrategyPattern
         }
     }
 
-    // Context
     public class ShoppingCart
     {
         private IPaymentStrategy paymentStrategy;
